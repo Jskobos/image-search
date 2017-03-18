@@ -1,0 +1,19 @@
+{
+  "name": "image-search",
+  "version": "1.0.0",
+  "description": "Image search abstraction layer for the Free Code Camp Backend certification program.",
+  "main": "server.js",
+  "scripts": {
+    "test": "jasmine-node spec/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jskobos/image-search.git"
+  },
+  "author": "Jared Kobos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jskobos/image-search/issues"
+  },
+  "homepage": "https://github.com/Jskobos/image-search#readme"
+}
