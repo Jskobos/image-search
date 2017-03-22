@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/Jskobos/image-search/issues"
   },
-  "homepage": "https://github.com/Jskobos/image-search#readme"
+  "homepage": "https://github.com/Jskobos/image-search#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "moment": "^2.18.1",
+    "mongoose": "^4.9.1",
+    "pug": "^2.0.0-beta11",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
+  }
 }
