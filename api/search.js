@@ -14,15 +14,15 @@ search = (app) => {
 
   app.get('/imagesearch/:searchQuery', (req,res) => {
     let query = req.params.searchQuery
-    let offset = 10
+    let offset = req.query.offset || 1
+    console.log(offset)
     googleSearch.build({
       q: query,
-      num: offset,
+      start: offset,
       searchType: 'image',
       fields: 'items(link,snippet,image/thumbnailLink,image/contextLink)'
     },(err,docs) => {
       if (err) return console.error(err)
-      console.log(docs)
       addEntry(query)
       res.json(formatResults(docs.items))
     })
@@ -42,7 +42,6 @@ addEntry = (query) => {
 formatResults = (items) => {
   let results = []
   items.forEach((el) => {
-    console.log(el)
     let temp = {
       url: el.link,
       snippet: el.snippet,
