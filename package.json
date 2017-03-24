@@ -17,8 +17,9 @@
   },
   "homepage": "https://github.com/Jskobos/image-search#readme",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "express": "^4.15.2",
-    "moment": "^2.18.1",
+    "google-search": "0.0.5",
     "mongoose": "^4.9.1",
     "pug": "^2.0.0-beta11",
     "request": "^2.81.0"
