@@ -1,7 +1,6 @@
 const request = require('request')
 const Google  = require('google-search')
 
-
 // Import Mongoose schema.
 const SearchRecord = require('./schema')
 
@@ -15,7 +14,6 @@ search = (app) => {
   app.get('/imagesearch/:searchQuery', (req,res) => {
     let query = req.params.searchQuery
     let offset = req.query.offset || 1
-    console.log(offset)
     googleSearch.build({
       q: query,
       start: offset,

@@ -26,13 +26,6 @@ describe("Image search API", function() {
         done();
       });
     });
-    it("accepts a paging offset", function(done) {
-      request.get(base_url + "/imagesearch/lolcats%20funny?offset=10", function(error, response, body) {
-        body = JSON.parse(body);
-        expect(body.length).toBe(10);
-        done();
-      });
-    });
     it("returns the latest search history", function(done) {
       request.get(base_url + "/latest/imagesearch/", function(error, response, body) {
         body = JSON.parse(body);
