@@ -16,7 +16,7 @@ const history = require('./api/history')
 
 // Render instructions page on root route request.
 app.get('/', (req,res) => {
-  res.render('index.md')
+  res.sendFile(path.join(__dirname, 'public/index.html'))
 })
 
 mongoose.connect(process.env.DB_LINK)
