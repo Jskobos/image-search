@@ -1,10 +1,12 @@
+'use strict'
+
 const request = require('request')
 const Google  = require('google-search')
 
 // Import Mongoose schema.
 const SearchRecord = require('./schema')
 
-search = (app) => {
+const search = (app) => {
 
   const googleSearch = new Google({
     key: process.env.GOOGLE_APIKEY,
@@ -27,7 +29,7 @@ search = (app) => {
   })
 }
 
-addEntry = (query) => {
+const addEntry = (query) => {
   let entry = new SearchRecord({
     term: query,
     when: new Date()
@@ -37,7 +39,7 @@ addEntry = (query) => {
   })
 }
 
-formatResults = (items) => {
+const formatResults = (items) => {
   let results = []
   items.forEach((el) => {
     let temp = {

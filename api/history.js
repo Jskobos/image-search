@@ -1,7 +1,9 @@
+'use strict'
+
 // Import Mongoose schema.
 const SearchRecord = require('./schema')
 
-history = (app) => {
+const history = (app) => {
 
   app.get('/latest/imagesearch', (req,res) => {
     SearchRecord.find()
