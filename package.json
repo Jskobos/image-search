@@ -25,6 +25,8 @@
     "request": "^2.81.0"
   },
   "devDependencies": {
-    "jasmine-node": "^1.14.5"
+    "factory_girl": "^0.2.3",
+    "jasmine-node": "^1.14.5",
+    "rewire": "^2.5.2"
   }
 }
